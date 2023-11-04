@@ -14,11 +14,8 @@
             this.Location = location;
         }
 
-        public abstract void AddLiters(double liters);
-
-        public abstract void AddLiters(char liters);
-
-        public abstract void AddLiters(string liters);
-        public abstract Statistics GetStatistics();
+        public abstract void AddLiters(double liters, string fileName);
+        public abstract void AddLiters(string liters, string fileName);
+        public abstract Statistics GetStatistics(string fileName);
     }
 }
