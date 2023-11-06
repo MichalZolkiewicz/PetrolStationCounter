@@ -1,9 +1,6 @@
-﻿using System.Diagnostics;
-using System.Runtime.CompilerServices;
-
-namespace PetrolStationCounter
+﻿namespace PetrolStationCounter
 {
-    internal class PetrolStationCounterInFile : BasePetrolStationCounter
+    public class PetrolStationCounterInFile : BasePetrolStationCounter
     {
         public override event LitersAddedDelegate LitersAdded;
 
@@ -55,21 +52,21 @@ namespace PetrolStationCounter
             switch (input)
             {
                 case "A":
+                case "a":
                     fileName = petrol95File;
                     break;
                 case "B":
+                case "b":
                     fileName = petrol98File;
                     break;
                 case "C":
+                case "c":
                     fileName = dieselFile;
                     break;
                 case "D":
+                case "d":
                     fileName = dieselUltimateFile;
                     break;
-                case "Q":
-                case "q":
-                        break;
-                        
                 default:
                     throw new Exception("Wrong letter!");
             }
@@ -77,12 +74,12 @@ namespace PetrolStationCounter
             return fileName;
         }
 
-        private List<double> GetLitersFromFile(string filename)
+        private List<double> GetLitersFromFile(string fileName)
         {
             var liters = new List<double>();
-            if(File.Exists(filename))
+            if(File.Exists(fileName))
             {
-                using(var reader = File.OpenText(filename))
+                using(var reader = File.OpenText(fileName))
                 {
                     var line = reader.ReadLine();
                     while(line != null)
