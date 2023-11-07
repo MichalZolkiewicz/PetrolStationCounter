@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace PetrolStationCounter
 {
-    internal class PetrolStationCounterInMemory : BasePetrolStationCounter
+    public class PetrolStationCounterInMemory : BasePetrolStationCounter
     {
         private List<double> petrol95 = new List<double>();
         private List<double> petrol98 = new List<double>();
