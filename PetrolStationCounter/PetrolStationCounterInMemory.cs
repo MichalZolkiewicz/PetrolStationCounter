@@ -20,7 +20,7 @@ namespace PetrolStationCounter
 
         public override void AddLiters(double liters, string fuelType)
         {
-            if (liters > 0 && fuelType == "petrol95")
+            if (liters > 0)
             {
                 switch(fuelType)
                 {
@@ -92,9 +92,39 @@ namespace PetrolStationCounter
             return listType;
         }
 
+        public List<double> GetListForStatistics(string type)
+        {
+            List<double> fuelList;
+            switch (type)
+            {
+                case "petrol95":
+                    fuelList = this.petrol95;
+                    break;
+                case "petrol98":
+                    fuelList = this.petrol98;
+                    break;
+                case "dieselFuel":
+                    fuelList = this.dieselFuel;
+                    break;
+                case "dieselUltimateFuel":
+                    fuelList = this.dieselUltimateFuel;
+                    break;
+                default:
+                    throw new Exception("Wrong fuel list name!");
+            }
+            return fuelList;
+        }
+
         public override Statistics GetStatistics(string type)
         {
-            throw new NotImplementedException();
+            var litersFromList = GetListForStatistics(type);
+            var statistics = new Statistics();
+
+            foreach(var liter in litersFromList)
+            {
+                statistics.AddLiters(liter);  
+            }
+            return statistics;
         }
     }
 }
