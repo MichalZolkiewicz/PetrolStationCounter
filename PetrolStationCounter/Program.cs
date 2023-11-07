@@ -11,7 +11,7 @@ void PetrolStationLitersAdded(object sender, EventArgs args)
     Console.WriteLine("Fuel amount added!");
 }
 
-while(true)
+while (true)
 {
     Console.WriteLine("\nChoose type of fueal\nA - 95, B - 98, C - Diesel, D - Diesel Ultimate\nTo quit press Q");
     Console.WriteLine();
