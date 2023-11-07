@@ -1,4 +1,7 @@
-﻿namespace PetrolStationCounter
+﻿using System.Diagnostics;
+using System.Xml.Linq;
+
+namespace PetrolStationCounter
 {
     internal class PetrolStationCounterInMemory : BasePetrolStationCounter
     {
@@ -15,43 +18,78 @@
     
         }
 
-        public override void AddLiters(double liters, List<double> fuelType)
+        public override void AddLiters(double liters, string fuelType)
         {
-            throw new NotImplementedException();
+            if (liters > 0 && fuelType == "petrol95")
+            {
+                switch(fuelType)
+                {
+                    case "petrol95":
+                        petrol95.Add(liters); 
+                        break;
+                    case "petrol98":
+                        petrol98.Add(liters);
+                        break;
+                    case "dieselFuel":
+                        dieselFuel.Add(liters);
+                        break;
+                    case "dieselUltimateFuel":
+                        dieselUltimateFuel.Add(liters);
+                        break;
+                    default:
+                        throw new Exception("Wrong fuel type!");
+                }
+
+                if (LitersAdded != null)
+                {
+                    LitersAdded(this, new EventArgs());
+                }
+            }
+            else
+            {
+                throw new Exception("Invalid liters value!");
+            }
         }
 
         public override void AddLiters(string liters, string type)
         {
-            throw new NotImplementedException();
+            if (double.TryParse(liters, out double result))
+            {
+                this.AddLiters(result, type);
+            }
+            else
+            {
+                throw new Exception("String is not a double!");
+            }
         }
 
-        public List<double> ChooseList(string input)
+        public String ChooseList(string input)
         {
-            List<double> fuelList;
+            string listType;
 
             switch (input)
             {
                 case "A":
                 case "a":
-                    fuelList = this.petrol95;
+                    listType = "petrol95";
                     break;
                 case "B":
                 case "b":
-                    fuelList = this.petrol98;
+                    listType = "petrol98";
                     break;
                 case "C":
                 case "c":
-                    fuelList = this.dieselFuel;
+                    listType = "dieselFuel";
                     break;
                 case "D":
                 case "d":
-                    fuelList = this.dieselUltimateFuel;
+                    listType = "dieselUltimateFuel";
                     break;
                 default:
                     throw new Exception("Wrong letter!");
             }
 
-            return fuelList;
+            return listType;
         }
 
         public override Statistics GetStatistics(string type)
