@@ -38,6 +38,7 @@ while(true)
 
 while (true)
 {
+    Console.WriteLine("===========================================");
     Console.WriteLine("\nChoose type of fuel to display statistics\nA - 95, B - 98, C - ON, D - ON Ultimate\nTo quit press Q");
     Console.WriteLine();
     var input = Console.ReadLine();

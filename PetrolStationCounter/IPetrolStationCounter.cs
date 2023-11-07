@@ -7,9 +7,9 @@ namespace PetrolStationCounter
         string Name { get; }
         string Location { get; }
 
-        void AddLiters(double liters, string fileName);
-        void AddLiters(string liters, string fileName);
-        Statistics GetStatistics(string fileName);
+        void AddLiters(double liters, string type);
+        void AddLiters(string liters, string type);
+        Statistics GetStatistics(string type);
 
         event LitersAddedDelegate LitersAdded;
     }

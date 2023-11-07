@@ -14,11 +14,11 @@
         {
         }
         
-        public override void AddLiters(double liters, string fileName)
+        public override void AddLiters(double liters, string type)
         {
             if (liters > 0)
             {
-                using (var writer = File.AppendText(fileName))
+                using (var writer = File.AppendText(type))
                 {
                     writer.WriteLine(liters);
                     if (LitersAdded != null)
@@ -33,11 +33,11 @@
             }
         }
 
-        public override void AddLiters(string liters, string fileName)
+        public override void AddLiters(string liters, string name)
         {
             if(double.TryParse(liters, out double result))
             {
-                this.AddLiters(result, fileName);
+                this.AddLiters(result, name);
             }
             else
             {
@@ -74,12 +74,12 @@
             return fileName;
         }
 
-        private List<double> GetLitersFromFile(string fileName)
+        private List<double> GetLitersFromFile(string type)
         {
             var liters = new List<double>();
-            if(File.Exists(fileName))
+            if(File.Exists(type))
             {
-                using(var reader = File.OpenText(fileName))
+                using(var reader = File.OpenText(type))
                 {
                     var line = reader.ReadLine();
                     while(line != null)
@@ -93,9 +93,9 @@
             return liters;
         }
 
-        public override Statistics GetStatistics(string fileName)
+        public override Statistics GetStatistics(string type)
         {
-            var litersFromFile = this.GetLitersFromFile(fileName);
+            var litersFromFile = this.GetLitersFromFile(type);
             var statistics = new Statistics();
             
             foreach(var liter in litersFromFile)
