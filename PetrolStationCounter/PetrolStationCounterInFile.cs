@@ -33,11 +33,11 @@
             }
         }
 
-        public override void AddLiters(string liters, string name)
+        public override void AddLiters(string liters, string type)
         {
             if(double.TryParse(liters, out double result))
             {
-                this.AddLiters(result, name);
+                this.AddLiters(result, type);
             }
             else
             {
