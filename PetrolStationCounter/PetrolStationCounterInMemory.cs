@@ -1,9 +1,6 @@
-﻿using System.Diagnostics;
-using System.Xml.Linq;
-
-namespace PetrolStationCounter
+﻿namespace PetrolStationCounter
 {
-    public class PetrolStationInMemory : BasePetrolStation
+    public class PetrolStationCounterInMemory : BasePetrolStation
     {
         private List<double> petrol95 = new List<double>();
         private List<double> petrol98 = new List<double>();
@@ -12,7 +9,7 @@ namespace PetrolStationCounter
         
         public override event LitersAddedDelegate LitersAdded;
 
-        public PetrolStationInMemory(string name, string location)
+        public PetrolStationCounterInMemory(string name, string location)
             : base(name, location)
         {
     

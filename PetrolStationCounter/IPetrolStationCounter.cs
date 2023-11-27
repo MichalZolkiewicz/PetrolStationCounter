@@ -1,4 +1,4 @@
-﻿using static PetrolStationCounter.BasePetrolStation;
+﻿using static PetrolStation.BasePetrolStation;
 
 namespace PetrolStationCounter
 {

@@ -2,7 +2,7 @@
 
 namespace PetrolStationCounter.Tests
 {
-    public class PetrolStationTests
+    public class PetrolStationCounterTests
     {
 
         [Test]
