@@ -1,4 +1,7 @@
-﻿namespace PetrolStationCounter
+﻿using System.Diagnostics;
+using System.Xml.Linq;
+
+namespace PetrolStationCounter
 {
     public class PetrolStationInMemory : BasePetrolStation
     {

@@ -1,4 +1,6 @@
-﻿namespace PetrolStationCounter
+﻿using System.Security.AccessControl;
+
+namespace PetrolStationCounter
 {
     public class Statistics
     {
