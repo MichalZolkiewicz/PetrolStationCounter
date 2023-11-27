@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <ProjectReference Include="..\PetrolStationCounter\PetrolStationCounter.csproj" />
+	  <ProjectReference Include="..\PetrolStationCounter\PetrolStation.csproj" />
   </ItemGroup>
 
 </Project>

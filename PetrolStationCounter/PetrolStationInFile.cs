@@ -1,6 +1,6 @@
 ﻿namespace PetrolStationCounter
 {
-    public class PetrolStationCounterInFile : BasePetrolStationCounter
+    public class PetrolStationInFile : BasePetrolStation
     {
         public override event LitersAddedDelegate LitersAdded;
 
@@ -9,7 +9,7 @@
         private const string dieselFile = "ON.txt";
         private const string dieselUltimateFile = "Ulti.txt";
 
-        public PetrolStationCounterInFile(string name, string location)
+        public PetrolStationInFile(string name, string location)
             : base(name, location)
         {
         }

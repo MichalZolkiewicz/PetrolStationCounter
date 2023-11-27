@@ -2,13 +2,13 @@
 
 namespace PetrolStationCounter.Tests
 {
-    public class PetrolStationCounterTests
+    public class PetrolStationTests
     {
 
         [Test]
         public void WhenAddLitersToPetrol95List_ReturnCorrectSum()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "petrol95";
 
 
@@ -24,7 +24,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToPetrol95List_ReturnCorrectCount()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "petrol95";
 
 
@@ -40,7 +40,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToPetrol95List_ReturnCorrectMinAndMax()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "petrol95";
 
 
@@ -57,7 +57,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToPetrol95List_ReturnCorrectAverage()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "petrol95";
 
 
@@ -73,7 +73,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToPetrol98List_ReturnCorrectSum()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "petrol98";
 
 
@@ -89,7 +89,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToPetrol98List_ReturnCorrectCount()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "petrol98";
 
 
@@ -105,7 +105,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToPetrol98List_ReturnCorrectMinAndMax()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "petrol98";
 
 
@@ -122,7 +122,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToPetrol98List_ReturnCorrectAverage()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "petrol98";
 
 
@@ -138,7 +138,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToDieselFuelList_ReturnCorrectSum()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "dieselFuel";
 
 
@@ -154,7 +154,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToDieselFuelList_ReturnCorrectCount()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "dieselFuel";
 
 
@@ -170,7 +170,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToDieselFuelList_ReturnCorrectMinAndMax()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "dieselFuel";
 
 
@@ -187,7 +187,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToDieselFuelList_ReturnCorrectAverage()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "dieselFuel";
 
 
@@ -203,7 +203,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToDieselUltimateFuelList_ReturnCorrectSum()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "dieselUltimateFuel";
 
 
@@ -219,7 +219,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToDieselUltimateFuelList_ReturnCorrectCount()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "dieselUltimateFuel";
 
 
@@ -235,7 +235,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToDieselUltimateFuelList_ReturnCorrectMinAndMax()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "dieselUltimateFuel";
 
 
@@ -252,7 +252,7 @@ namespace PetrolStationCounter.Tests
         [Test]
         public void WhenAddLitersToDieselUltimateFuelList_ReturnCorrectAverage()
         {
-            var petrolStation = new PetrolStationCounterInMemory("BP", "Kraków");
+            var petrolStation = new PetrolStationInMemory("BP", "Kraków");
             string petrolType = "dieselUltimateFuel";
 
 

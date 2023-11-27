@@ -1,6 +1,6 @@
 ﻿namespace PetrolStationCounter
 {
-    public class PetrolStationCounterInMemory : BasePetrolStationCounter
+    public class PetrolStationInMemory : BasePetrolStation
     {
         private List<double> petrol95 = new List<double>();
         private List<double> petrol98 = new List<double>();
@@ -9,7 +9,7 @@
         
         public override event LitersAddedDelegate LitersAdded;
 
-        public PetrolStationCounterInMemory(string name, string location)
+        public PetrolStationInMemory(string name, string location)
             : base(name, location)
         {
     

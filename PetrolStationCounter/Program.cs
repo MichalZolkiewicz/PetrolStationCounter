@@ -1,4 +1,4 @@
-﻿using PetrolStationCounter;
+﻿using PetrolStation;
 
 Console.WriteLine("Welcome in PetroSales program designed for Petrol Stations");
 Console.WriteLine("===========================================");
