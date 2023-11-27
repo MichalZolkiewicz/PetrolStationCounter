@@ -1,6 +1,6 @@
 ﻿namespace PetrolStationCounter
 {
-    public class PetrolStationCounterInMemory : BasePetrolStation
+    public class PetrolStationCounterInMemory : BasePetrolStationCounter
     {
         private List<double> petrol95 = new List<double>();
         private List<double> petrol98 = new List<double>();

@@ -1,6 +1,6 @@
 ﻿namespace PetrolStationCounter
 {
-    public class PetrolStationCounterInFile : BasePetrolStation
+    public class PetrolStationCounterInFile : BasePetrolStationCounter
     {
         public override event LitersAddedDelegate LitersAdded;
 

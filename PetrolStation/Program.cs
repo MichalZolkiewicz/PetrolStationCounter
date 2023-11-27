@@ -1,10 +1,10 @@
-﻿using PetrolStation;
+﻿using PetrolStationCounter;
 
 Console.WriteLine("Welcome in PetroSales program designed for Petrol Stations");
 Console.WriteLine("===========================================");
 Console.WriteLine();
 
-var petrolStation = new PetrolStationInFile("BP", "Kraków");
+var petrolStation = new PetrolStationCounterInFile("BP", "Kraków");
 petrolStation.LitersAdded += PetrolStationLitersAdded;
 void PetrolStationLitersAdded(object sender, EventArgs args)
 {
